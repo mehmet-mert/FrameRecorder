@@ -1,19 +1,19 @@
 # FrameRecorder
 
-FrameRecorder is a tool that records your screen while you are working.
+FrameRecorder siz çalışırken ekranınızı kaydeden bir araçtır.
 
-## Getting Started
+## Başlarken
 
-Download or fork the repository and run <b>main.py</b>.
+Bu depoyu indirin yada çatallayın ve <b>main.py</b> dosyasını çalıştırın.
 
-### Prerequisites
+### Ön Koşullar
 
-<b>Python 3</b> and <b>pip</b> must be installed in your computer.
+<b>Python 3</b> ve <b>pip</b> bilgisayarınızda kurulu olmalı.
 
-## License
+## Lisans
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/mehmet-mert/FrameRecorder/blob/master/LICENSE) file for details
+Bu proje MIT License'ı ile lisanslanmıştır. - Ayrıntılar için [LICENSE](https://github.com/mehmet-mert/FrameRecorder/blob/master/LICENSE) dosyasına bakabilirsiniz.
 
-## Acknowledgments
+## Teşekkürler
 
-* Thanks to https://github.com/Umut-Umut for testing.
+* https://github.com/Umut-Umut 'a test aşamalarına yardım ettiği için teşekkür ederim.
