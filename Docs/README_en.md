@@ -12,7 +12,7 @@ Download or fork the repository and run <b>main.py</b>.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/mehmet-mert/FrameRecorder/blob/master/LICENSE) file for details
 
 ## Acknowledgments
 
