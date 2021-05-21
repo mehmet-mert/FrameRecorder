@@ -1,9 +1,17 @@
-import tkinter
-import datetime
-import numpy as np
-import cv2 as cv
-import pyautogui
-import webbrowser
+import os
+while True:
+    try:
+        import tkinter
+        import datetime
+        import numpy as np
+        import cv2 as cv
+        import pyautogui
+        import webbrowser
+    except:
+        os.system("pip install opencv-python")
+        os.system("pip install numpy")
+        os.system("pip install PyAutoGUI")
+    break
 
 
 status = ""
