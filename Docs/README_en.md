@@ -16,4 +16,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Acknowledgments
 
-* Thanks to https://github.com/Umut-Umut for testing.
+* Thanks to https://github.com/Umut-Umut and https://github.com/hilmiAkkaya for testing.
