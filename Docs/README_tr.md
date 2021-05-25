@@ -1,6 +1,7 @@
 # FrameRecorder
 
 FrameRecorder siz çalışırken ekranınızı kaydeden bir araçtır.
+
 <img width=50% src="https://github.com/mehmet-mert/FrameRecorder/blob/master/Docs/open.PNG">
 
 ## Başlarken
