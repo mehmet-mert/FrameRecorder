@@ -1,6 +1,8 @@
 # FrameRecorder
 
 FrameRecorder is a tool that records your screen while you are working.
+<img width=50% src="https://github.com/mehmet-mert/FrameRecorder/blob/master/Docs/open.PNG">
+
 
 ## Getting Started
 
