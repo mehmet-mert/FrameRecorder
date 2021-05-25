@@ -28,7 +28,6 @@ def find_time():
 root = tkinter.Tk()
 root.resizable(False, False)
 root.title("Frame Recorder")
-root.iconbitmap('record.ico')
 root.geometry("800x400+500+100")
 header = tkinter.Label(text="Frame Recorder", font=(None, 30))
 create_label = tkinter.Label(text="Create an", font=(None, 20))
