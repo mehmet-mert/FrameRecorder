@@ -48,7 +48,7 @@ def record():
     out.write(frame)
 
 def start_record():
-    if status not in ("don", "end"):
+    if status in ("end"):
         create_vid()
     status_playing("playing")
 
