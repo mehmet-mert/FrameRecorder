@@ -2,6 +2,7 @@ import os
 while True:
     try:
         import tkinter
+        from tkinter import *
         import datetime
         import numpy as np
         import cv2 as cv
@@ -11,6 +12,7 @@ while True:
         os.system("pip install opencv-python")
         os.system("pip install numpy")
         os.system("pip install PyAutoGUI")
+        pass
     break
 
 
@@ -29,10 +31,14 @@ root = tkinter.Tk()
 root.resizable(False, False)
 root.title("Frame Recorder")
 root.geometry("800x400+500+100")
-header = tkinter.Label(text="Frame Recorder", font=(None, 30))
-create_label = tkinter.Label(text="Create an", font=(None, 20))
+canvas = Canvas(root,bg="#4392F1",height=400,width=800,bd=0, highlightthickness=0,relief="ridge")
+canvas.place(x=0,y=0)
+background_img = PhotoImage(file=f"assets/background.png")
+background = canvas.create_image(400.0,200.0,image=background_img)
+header = canvas.create_text(400.0,91.0,text="Frame Recorder",fill="#ECE8EF",font=("Roboto-Medium",int(48.0)))
+create_label = canvas.create_text(203.5,174.5,text="create an",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
+video_label = canvas.create_text(590.5,174.5,text="fps video",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
 switch = tkinter.Scale(from_=100, to=200, orient=tkinter.HORIZONTAL, length=200)
-video_label = tkinter.Label(text="fps video", font=(None, 20))
 
 #Start button command
 def create_vid():
@@ -59,25 +65,27 @@ def status_playing(yeter):
     if status == "don":
         pause["state"] = "disabled"
         start["state"] = "normal"
-        start.config(text="⏵ Play")
-        info.config(text="Paused. Continue Recording with Play.")
+        # info.config(text="Paused. Continue Recording with Play.")
+        canvas.itemconfig(info, text="Paused. Continue Recording with Play")
     elif status == "playing":
         pause["state"] = "normal"
         end["state"] = "normal"
         start["state"] = "disabled"
-        start.config(text="⏵ Play")
-        info.config(text="Recording...")
+        canvas.itemconfig(info, text="Recording...")
     elif status == "end":
         info.config(text="Video Saved At Outputs Folder. Let's Create Another One!")
         pause["state"] = "disabled"
         end["state"] = "disabled"
         start["state"] = "normal"
-        start.config(text="+ New")
+        # start.config(text="+ New")
 
-start = tkinter.Button(text="⏵ Start", font=(None, 20), command=lambda :start_record())
-pause = tkinter.Button(text="⏸ Pause", font=(None, 20), command=lambda :status_playing("don"))
-end = tkinter.Button(text="⏹ End", font=(None, 20), command=lambda :status_playing("end"))
-info = tkinter.Label(text="Start Recording", font=(None, 16))
+start_img = PhotoImage(file=f"assets/start.png")
+start = Button(image=start_img, borderwidth=0, highlightthickness=0, command=lambda :start_record(), relief="flat")
+pause_img = PhotoImage(file=f"assets/end.png")
+pause = Button(image=pause_img, borderwidth=0, highlightthickness=0, command=lambda :status_playing("don"), relief="flat")
+end_img = PhotoImage(file=f"assets/pause.png")
+end = Button(image=end_img, borderwidth=0, highlightthickness=0, command=lambda :status_playing("end"), relief="flat")
+info = canvas.create_text(400.0,342.5,text="Start Recording",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
 
 #When started
 end["state"] = "disabled"
@@ -88,17 +96,11 @@ def callback(event):
 watermark = tkinter.Label(root, text=r"https://github.com/mehmet-mert", fg="blue", cursor="hand2")
 while True:
     root.update()
-    header.place(x=400, y=20, anchor=tkinter.N)
-    create_label.place(x=200, y=150, anchor=tkinter.CENTER)
-    switch.place(x=400, y=146, anchor=tkinter.CENTER)
-    video_label.place(x=600, y=150, anchor=tkinter.CENTER)
+    switch.place(x=400, y=176, anchor=tkinter.CENTER)
+    start.place(x=318, y=230, width=172, height=58)
+    pause.place(x=518, y=230, width=172, height=58)
+    end.place(x=118, y=230, width=172, height=58)
 
-    start.place(x=200, y=250, anchor=tkinter.CENTER)
-    pause.place(x=400, y=250, anchor=tkinter.CENTER)
-    end.place(x=600, y=250, anchor=tkinter.CENTER)
-    info.place(x=400, y=320, anchor=tkinter.CENTER)
-    watermark.place(x=400, y=360, anchor=tkinter.CENTER)
-    watermark.bind("<Button-1>", callback)
     if status == "playing":
         record()
     elif status == "don":
