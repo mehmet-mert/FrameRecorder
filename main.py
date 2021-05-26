@@ -5,7 +5,7 @@ while True:
         from tkinter import *
         import datetime
         import numpy as np
-        import cv2 as cv
+        #import cv2 as cv
         import pyautogui
         import webbrowser
     except:
@@ -73,7 +73,8 @@ def status_playing(yeter):
         start["state"] = "disabled"
         canvas.itemconfig(info, text="Recording...")
     elif status == "end":
-        info.config(text="Video Saved At Outputs Folder. Let's Create Another One!")
+        canvas.itemconfig(info, text="Video Saved At Outputs Folder. Let's Create Another One!")
+        #info.config(text="")
         pause["state"] = "disabled"
         end["state"] = "disabled"
         start["state"] = "normal"
@@ -81,9 +82,9 @@ def status_playing(yeter):
 
 start_img = PhotoImage(file=f"assets/start.png")
 start = Button(image=start_img, borderwidth=0, highlightthickness=0, command=lambda :start_record(), relief="flat")
-pause_img = PhotoImage(file=f"assets/end.png")
+pause_img = PhotoImage(file=f"assets/pause.png")
 pause = Button(image=pause_img, borderwidth=0, highlightthickness=0, command=lambda :status_playing("don"), relief="flat")
-end_img = PhotoImage(file=f"assets/pause.png")
+end_img = PhotoImage(file=f"assets/end.png")
 end = Button(image=end_img, borderwidth=0, highlightthickness=0, command=lambda :status_playing("end"), relief="flat")
 info = canvas.create_text(400.0,342.5,text="Start Recording",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
 
@@ -98,8 +99,8 @@ while True:
     root.update()
     switch.place(x=400, y=176, anchor=tkinter.CENTER)
     start.place(x=318, y=230, width=172, height=58)
-    pause.place(x=518, y=230, width=172, height=58)
-    end.place(x=118, y=230, width=172, height=58)
+    pause.place(x=118, y=230, width=172, height=58)
+    end.place(x=518, y=230, width=172, height=58)
 
     if status == "playing":
         record()
