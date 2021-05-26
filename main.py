@@ -15,7 +15,6 @@ while True:
         pass
     break
 
-
 status = ""
 
 #Find the time for name
@@ -25,19 +24,18 @@ def find_time():
                      x.strftime("%M") + "-" + x.strftime("%S"))
     return date_for_name
 
-
 #GUI
 root = tkinter.Tk()
 root.resizable(False, False)
 root.title("Frame Recorder")
 root.geometry("800x400+500+100")
-canvas = Canvas(root,bg="#4392F1",height=400,width=800,bd=0, highlightthickness=0,relief="ridge")
-canvas.place(x=0,y=0)
+canvas = Canvas(root, bg="#4392F1", height=400, width=800, bd=0, highlightthickness=0, relief="ridge")
+canvas.place(x=0, y=0)
 background_img = PhotoImage(file=f"assets/background.png")
-background = canvas.create_image(400.0,200.0,image=background_img)
-header = canvas.create_text(400.0,91.0,text="Frame Recorder",fill="#ECE8EF",font=("Roboto-Medium",int(48.0)))
-create_label = canvas.create_text(203.5,174.5,text="create an",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
-video_label = canvas.create_text(590.5,174.5,text="fps video",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
+background = canvas.create_image(400.0, 200.0, image=background_img)
+header = canvas.create_text(400.0, 91.0, text="Frame Recorder", fill="#ECE8EF",font=("Roboto-Bold", int(30.0)))
+create_label = canvas.create_text(203.5, 174.5, text="create an",fill="#ECE8EF",font=("Roboto-Bold", int(16.0)))
+video_label = canvas.create_text(590.5,174.5,text="fps video",fill="#ECE8EF",font=("Roboto-Medium", int(16.0)))
 switch = tkinter.Scale(from_=100, to=200, orient=tkinter.HORIZONTAL, length=200)
 
 #Start button command
@@ -85,7 +83,7 @@ pause_img = PhotoImage(file=f"assets/end.png")
 pause = Button(image=pause_img, borderwidth=0, highlightthickness=0, command=lambda :status_playing("don"), relief="flat")
 end_img = PhotoImage(file=f"assets/pause.png")
 end = Button(image=end_img, borderwidth=0, highlightthickness=0, command=lambda :status_playing("end"), relief="flat")
-info = canvas.create_text(400.0,342.5,text="Start Recording",fill="#ECE8EF",font=("Roboto-Medium",int(28.0)))
+info = canvas.create_text(400.0, 342.5, text="Start Recording", fill="#ECE8EF", font=("Roboto-Medium", int(16.0)))
 
 #When started
 end["state"] = "disabled"
