@@ -5,7 +5,7 @@ while True:
         from tkinter import *
         import datetime
         import numpy as np
-        #import cv2 as cv
+        import cv2 as cv
         import pyautogui
         import webbrowser
     except:
