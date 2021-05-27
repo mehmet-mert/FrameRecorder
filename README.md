@@ -5,6 +5,7 @@
 FrameRecorder is a tool that records your screen while you are working.
 
 <img width=50% src="https://raw.githubusercontent.com/mehmet-mert/FrameRecorder/master/Docs/Ekran%20Al%C4%B1nt%C4%B1s%C4%B1.PNG">
+
 ### GUI Created (Modified) by @ParthJadhav by using [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
 
 
