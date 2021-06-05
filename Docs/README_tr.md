@@ -2,7 +2,7 @@
 
 FrameRecorder siz çalışırken ekranınızı kaydeden bir araçtır.
 
-<img width=50% src="https://raw.githubusercontent.com/mehmet-mert/FrameRecorder/master/Docs/Ekran%20Al%C4%B1nt%C4%B1s%C4%B1.PNG">
+<img width=50% src="https://raw.githubusercontent.com/mehmet-mert/FrameRecorder/master/Docs/Ekran%20Al%C4%B1nt%C4%B1s%C4%B12.PNG">
 
 ### GUI Created (Modified) by @ParthJadhav by using [Tkinter-Designer](https://github.com/ParthJadhav/Tkinter-Designer)
 
