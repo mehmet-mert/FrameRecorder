@@ -21,4 +21,6 @@ Bu proje MIT License'ı ile lisanslanmıştır. - Ayrıntılar için [LICENSE](h
 
 ## Teşekkürler
 
-* https://github.com/Umut-Umut ve https://github.com/hilmiAkkaya 'a test aşamalarına yardım ettiği için teşekkür ederim.
+* [Umut Sancı](https://github.com/Umut-Umut) ve [Süleyman Hilmi Akkaya](https://github.com/hilmiAkkaya)'ya test aşamalarına yardım ettiği için teşekkür ederim.
+
+* [İsmet Fatih Güçlü](https://github.com/fatih51)'ye v1.0 release'si için teşekkür ederim .
