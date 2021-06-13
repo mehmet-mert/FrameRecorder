@@ -25,5 +25,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 
 ## Acknowledgments
 
-* Thanks to https://github.com/Umut-Umut and https://github.com/hilmiAkkaya for testing.
+* Thanks to [Umut Sancı](https://github.com/Umut-Umut) and [Süleyman Hilmi Akkaya](https://github.com/hilmiAkkaya) for testing.
+
+* Thanks to [İsmet Fatih Güçlü](https://github.com/fatih51) for release v1.0 .
 
