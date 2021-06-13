@@ -1,10 +1,11 @@
 import datetime
-import numpy as np
-import cv2 as cv
-import pyautogui
 import webbrowser
-import tkinter
 import interface
+import tkinter      #for Linux you must install tkinter and scrot
+
+import numpy as np  #pip install numpy
+import cv2 as cv    #pip install opencv-python
+import pyautogui    #pip install PyAutoGUI
 
 status = ""
 
