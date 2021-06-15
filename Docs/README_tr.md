@@ -2,6 +2,8 @@
 
 FrameRecorder siz çalışırken ekranınızı kaydeden bir araçtır.
 
+Bilgisayarınızda resim çizdiğinizi veya bir program yazdığınızı hayal edin. Bunu yaparken çalışmanızdan küçük klipler çekmek istemez misiniz? İşte o zaman FrameRecorder yardımınıza koşar. Sadece birkaç dakika içinde saatlerce süren süreci görün!
+
 ### FrameRecorder [YouTube Tanıtım](https://www.youtube.com/watch?v=UKQJ6gtvM7M&lc=UgwgbfG3yIvGFaqmjQ14AaABAg)
 <img width=50% src="https://raw.githubusercontent.com/mehmet-mert/FrameRecorder/master/Docs/Ekran%20Al%C4%B1nt%C4%B1s%C4%B12.PNG">
 
