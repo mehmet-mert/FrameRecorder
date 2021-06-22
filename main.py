@@ -37,6 +37,12 @@ def result_format():
     else:
         return ".avi"
 
+def result_format2():
+    if result_format() == ".mp4":
+        return "MP4V"
+    else:
+        return "XVID"
+
 
 interface.video_format.add_checkbutton(label=".mp4", onvalue=1, offvalue=0, variable=interface.mp4_format,
                                        command=lambda: edit_checks("mp4"))
@@ -51,7 +57,7 @@ interface.about.add_command(label="Mehmet Mert Altuntas",
 def create_vid():
     global out
     screen_size = pyautogui.size()
-    fourcc = cv.VideoWriter_fourcc(*"XVID")
+    fourcc = cv.VideoWriter_fourcc(*result_format2())
     out = cv.VideoWriter("Outputs/FrameRecorder " + find_time() + result_format(), fourcc, interface.switch.get(),
                          (screen_size))
 
