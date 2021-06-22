@@ -3,9 +3,13 @@
 import tkinter
 from tkinter import *
 
+def on_closing():
+    global running
+    running = False
 
 # GUI
 root = tkinter.Tk()
+root.protocol("WM_DELETE_WINDOW", on_closing)
 root.resizable(False, False)
 root.title("Frame Recorder")
 root.geometry("800x400+500+100")

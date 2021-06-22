@@ -93,7 +93,9 @@ interface.start.config(command=lambda: start_record())
 interface.end.config(command=lambda: status_playing("end"))
 interface.pause.config(command=lambda: status_playing("stopped"))
 
-while True:
+#interface.root.protocol("WM_DELETE_WINDOW", on_closing)
+interface.running = True
+while interface.running:
     interface.root.update()
     interface.switch.place(x=400, y=176, anchor=tkinter.CENTER)
     interface.start.place(x=318, y=230, width=172, height=58)
